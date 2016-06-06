@@ -1,11 +1,27 @@
-<html>
+<!DOCTYPE html>
   <head>
-    <title>Wedding Gallery</title>
-    <link rel="stylesheet" href="css/desktop/index.css">
-    <!-- <link rel="stylesheet" type="text/css" href="an/css/style.css" /> -->
+    <title>Attack Map</title>
+    <meta charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script></script>
   </head>
   <body>
+    <div id="explanation_overlay">
+        <div id="close_overlay" onclick="close_overlay();">X</div>
+        <p>Welcome to the Attack Map. Please refer to the numbers on the map below for an explanation of what this attack map is about.</p>
+        <p>1 - We have placed a couple of honeypot servers around our network and connected it to this mapping tool to illustrate the origin and type of network scans that we see from around the world. The servers are running a honeyd service that responds to each scan appropriately as if it is real server. </p>
+        <p>
+        2 - The block at the top of the screen shows a list of the most 4 most recent scans and provides the date and time, the source IP, the scan type info, the country of origin and the honedy server location.</p>
+        <p>
+        3 - The links to the right of the info block let you switch between the current view (a realtime view which updates with each new scan) and a history view which will show you what happend in the last hour and the last day. [note: they would if this was operational, currently it only shows the activity for 1 May 2014]</p>
+        <p>
+        4 - The list the left shows a count of the different scan types that increases each time it occurs.</p>
+        <img src="images/overview.png">
+    </div>
   </body>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="lib/d3.v3.min.js"></script>
+  <script src="lib/d3.geo.projection.v0.min.js"></script>
+  <script src="lib/topojson.v1.min.js"></script>   
+  <script src="js/attack_map.js"></script>
 </html>

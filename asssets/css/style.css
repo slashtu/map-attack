@@ -1,0 +1,134 @@
+body {
+	background-color: #000;
+	margin: 0 auto;
+	width: 100%; /*  Added 27/01/14 - Changed from "width: 1000px"  */
+	text-align: center; /*  Added 27/01/14  */
+	font-family: 'Play', sans-serif;
+	font-size: 12px;
+	font-weight: lighter;
+}
+
+/*  Added 27/01/14  */
+.masthead_container {
+	background: #fff;
+	border-bottom: 8px solid #00aeef;
+	padding: 15px;
+}
+
+/*  Added 27/01/14  */
+.masthead {
+	width: 1000px;
+	text-align: left;
+	margin: 0 auto;
+}
+
+/*  Added 27/01/14  */
+.is_logo {
+	margin-right: 50px;
+}
+
+#explanation_overlay {
+	margin-left: -500px;
+	left: 50%;
+	position: absolute;
+	top: 150px;
+	z-index: 9999;
+	opacity: 0.9;
+	display: none;
+	width: 900px;
+	height: 650px;
+	background: black;
+	border: 1px solid white;
+	padding: 20px;	
+}
+
+#explanation_overlay p {
+	color:white;
+	font-size: 1.3em;
+	text-align: left;
+}
+
+#close_overlay{
+	color:white;
+	cursor: pointer;
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	font-size: 1.5em;
+	padding: 5px;
+}
+
+.land {
+	fill: none;
+	stroke: #fff;
+	stroke-width: .5px;
+}
+
+.boundary {
+	fill: none;
+	stroke: #fff;
+	stroke-width: .5px;
+}
+
+.dot {
+	stroke:none;
+	fill:none; 
+}
+
+.invader {
+	fill:#fff;
+	stroke:none;
+	stroke-width:0.4px;
+	stroke-linecap:butt;
+	stroke-linejoin:miter;
+	stroke-opacity:1
+}
+
+.services_text, .services_count {
+	fill: #fff;
+	font-family: 'Play', sans-serif;
+	font-size: 12px;
+	font-weight: lighter;
+}
+
+.top_box {
+	fill: none;
+	stroke: #fff;
+	stroke-width: .5px;
+}
+
+.top_box_text {
+	font-family: 'Play', sans-serif;
+	font-size: 12px;
+	font-weight: lighter;
+}
+
+.loader_text {
+	font-family: 'Play', sans-serif;
+	font-size: 12px;
+	font-weight: lighter;
+}
+
+.loader {
+	fill: #000;
+	stroke: #fff;
+	stroke-width: .5px;
+}
+
+.time_select_heading {
+	font-family: 'Play', sans-serif;
+	font-size: 15px;
+	/*font-weight: lighter;*/
+}
+
+.time_select {
+	font-family: 'Play', sans-serif;
+	font-size: 15px;
+	cursor: pointer;
+	/*font-weight: lighter;*/
+}
+
+.selected {
+	font-weight: bold;
+	text-decoration: underline;
+}
