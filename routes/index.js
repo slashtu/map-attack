@@ -2,9 +2,14 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/invader', function(req, res, next) {
   // return res.sendFile( __base + 'public/index.html' );
   return res.sendFile( __base + 'asssets/index.html' );
+});
+
+router.get('/flight', function(req, res, next) {
+  // return res.sendFile( __base + 'public/index.html' );
+  return res.sendFile( __base + 'asssets/flight/index.html' );
 });
 
 // router.get('/test', function(req, res, next) {

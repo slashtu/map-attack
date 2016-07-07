@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:fb="http://ogp.me/ns/fb#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This flight animation uses d3.js geo and SVG transition.">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/flight/css/v4.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <title>Flight Animation - TNODA</title>
+    
+<link rel="stylesheet" href="/flight/css/v4blue.css">
+<style>
+.countries {
+  fill: #b0d0ab;
+  stroke: #6cb0e0;
+  stroke-width: 0.5px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+.airports {
+  fill: #036;
+  stroke: #6cb0e0;
+  stroke-width: 0.5px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+.route {
+  fill: none;
+  stroke-width: 0;
+}
+.plane {
+  fill: #fff;
+  stroke-width: 0;
+}
+@media(max-width: 768px) {
+  #map {
+    margin-top: -100px;
+  }
+}
+@media(min-width: 768px) {
+  #map {
+    margin-top: -300px;
+  }
+}
+</style>
+
+  </head>
+  <body>
+    
+    <div class="content">
+      
+<div id="fb-root"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div>
+  
+</div>
+    </div>
+    <div class="col-xs-12">
+      <h2>Flight Animation</h2>
+      <div><table>
+  <tr>
+    <td style="padding: 5px 30px 0 0;"><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></td>
+    <td style="padding-top: 5px;"><div class="g-plusone" data-size="medium"></div></td>
+    <td><fb:like href="http://www.tnoda.com/flightanimation" layout="button_count" action="like" show_faces="false" share="false"></fb:like></td>
+  </tr>
+</table></div>
+      <p class="lead" style="margin-bottom: 0;">This flight animation uses d3.js geo and SVG transition.</p>
+    </div>
+  </div>
+</div>
+<div id="map"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12" style="margin-bottom: 30px;">
+      <div>
+  
+</div>
+    </div>
+  </div>
+</div>
+
+    </div>
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <p><a href="/archive">BLOG</a>&nbsp;&nbsp;&nbsp;
+              <a href="/about">ABOUT</a></p>
+          </div>
+          <div class="col-sm-6">
+            <p class="copy">&copy; 2013 - 2015 <a href="/">TNODA.COM</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-41013822-1', 'tnoda.com');ga('send', 'pageview');
+    </script>
+    
+    
+<script>(function() {var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;po.src = 'https://apis.google.com/js/platform.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);})();</script>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="//d3js.org/queue.v1.min.js"></script>
+<script src="//d3js.org/topojson.v1.min.js"></script>
+<script src="/flight/js/flight.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,19 @@
+[{
+    "city": "Bottrop",
+    "isp": "unknown",
+    "protocol": "tcp",
+    "service": "microsoft-ds",
+    "bytes_in": "0",
+    "finger_print": "None",
+    "long": 6.916699999999992,
+    "src_ip": "80.134.64.16",
+    "lat": 51.516699999999986,
+    "connection": "-",
+    "honeypot_server": "vm-cpt-honeypot",
+    "bytes_out": "0",
+    "src_name": "p50864010.dip0.t-ipconnect.de",
+    "time_stamp": "2014-05-01-12:00:00.0000",
+    "country": "Germany",
+    "port": "445",
+    "as_num": 0
+}]
