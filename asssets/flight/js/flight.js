@@ -1,62 +1,18 @@
 $(function() {
   var OD_PAIRS = [
-    ["NRT", "JFK"],
-    ["SFO", "NRT"],
-    ["LAX", "HNL"],
-    ["HNL", "NRT"],
-    ["CDG", "JFK"],
-    ["NRT", "SYD"],
-    ["FCO", "PEK"],
-    ["LHR", "PVG"],
-    ["NRT", "ARN"],
-    ["LAX", "JFK"],
-    ["NRT", "DEL"],
-    ["DFW", "GRU"],
-    ["MAD", "ATL"],
-    ["ORD", "CAI"],
-    ["HKG", "CDG"],
-    ["LAS", "CDG"],
-    ["NRT", "SVO"],
-    ["DEN", "HNL"],
-    ["ORD", "LAX"],
-    ["SIN", "SEA"],
+
+    
     ["SYD", "PEK"],
-    ["CAI", "CPT"],
-    ["CUN", "JFK"],
-    ["ORD", "JFK"],
-    ["LHR", "BOM"],
-    ["LAX", "MEX"],
-    ["LHR", "CPT"],
-    ["PVG", "CGK"],
-    ["SYD", "BOM"],
-    ["JFK", "CPT"],
-    ["MAD", "GRU"],
-    ["EZE", "FCO"],
-    ["DEL", "DXB"],
-    ["DXB", "NRT"],
-    ["GRU", "MIA"],
-    ["SVO", "PEK"],
-    ["YYZ", "ARN"],
-    ["LHR", "YYC"],
-    ["HNL", "SEA"],
-    ["JFK", "EZE"],
-    ["EZE", "LAX"],
-    ["CAI", "HKG"],
-    ["SVO", "SIN"],
-    ["IST", "MCO"],
-    ["MCO", "LAX"],
-    ["FRA", "LAS"],
-    ["ORD", "FRA"],
-    ["MAD", "JFK"]
+
   ];
 
   var currentWidth = $('#map').width();
-  var width = 938;
+  var width = 900;
   var height = 620;
 
   var projection = d3.geo
                      .mercator()
-                     .scale(150)
+                     .scale(100)
                      .translate([width / 2, height / 1.41]);
 
   var path = d3.geo
@@ -68,8 +24,8 @@ $(function() {
               .append("svg")
               .attr("preserveAspectRatio", "xMidYMid")
               .attr("viewBox", "0 0 " + width + " " + height)
-              .attr("width", currentWidth)
-              .attr("height", currentWidth * height / width);
+              // .attr("width", currentWidth)
+              // .attr("height", currentWidth * height / width);
 
   var airportMap = {};
 
@@ -104,6 +60,8 @@ $(function() {
   }
 
   function fly(origin, destination) {
+    console.log(airportMap[origin])
+    console.log(airportMap[destination])
     var route = svg.append("path")
                    .datum({type: "LineString", coordinates: [airportMap[origin], airportMap[destination]]})
                    .attr("class", "route")
@@ -145,6 +103,7 @@ $(function() {
         i = 0;
       }
       var od = OD_PAIRS[i];
+      console.log(od)
       fly(od[0], od[1]);
       i++;
     }, 150);
