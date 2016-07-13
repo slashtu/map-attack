@@ -60,8 +60,7 @@ $(function() {
   }
 
   function fly(origin, destination) {
-    console.log(airportMap[origin])
-    console.log(airportMap[destination])
+
     var route = svg.append("path")
                    .datum({type: "LineString", coordinates: [airportMap[origin], airportMap[destination]]})
                    .attr("class", "route")

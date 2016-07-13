@@ -1,0 +1,29 @@
+.countries {
+  fill: #fff;
+  stroke: #b2b2b2;
+  stroke-width: 1px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.route {
+  /*opacity: 0.1;*/
+  fill: none;
+  stroke-width: 0;
+}
+.plane {
+  fill: #e15829;
+  stroke-width: 0;
+}
+@media(max-width: 768px) {
+  #map {
+    /*margin-top: -100px;*/
+  }
+}
+@media(min-width: 768px) {
+  #map {
+    /*margin-top: -100px;*/
+    /*height: 500px;*/
+  }
+}
