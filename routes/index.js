@@ -2,6 +2,11 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
+router.get('/ddos', function(req, res, next) {
+  // return res.sendFile( __base + 'public/index.html' );
+  return res.sendFile( __base + 'views/index.html' );
+});
+
 router.get('/invader', function(req, res, next) {
   // return res.sendFile( __base + 'public/index.html' );
   return res.sendFile( __base + 'asssets/index.html' );
